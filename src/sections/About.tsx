@@ -1,13 +1,9 @@
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
-import StarIcon from "@/assets/icons/star.svg";
-import bookImage from "@/assets/images/book-cover.png";
-import Image from "next/image";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GitHubIcon from "@/assets/icons/github.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
-import { TechIcon } from "@/components/TechIcon";
 import { ToolboxItem } from "@/components/ToolboxItem";
 
 const tools = [
