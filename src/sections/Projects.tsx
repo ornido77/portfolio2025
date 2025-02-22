@@ -15,7 +15,7 @@ const portfolioProjects = [
       { title: "Developed the app for mobile and web." },
       {
         title:
-          "Integrated a Unified Business Suite with CRM and POS functionalities.",
+          "Integrated a Unified Business Suite with Inventory, CRM, Customer Service and POS functionalities.",
       },
       { title: "Streamlined and automated employee workflows." },
     ],
@@ -63,14 +63,17 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
-      <div className="container">
-        <SectionHeader title="Projects" />
+      <div className="container ">
+        <div className="sticky top-16">
+          <SectionHeader title="Projects" />
+        </div>
 
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, index) => (
             <Card
               key={project.title}
-              className="pt-8 px-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
+              className="pt-8 px-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style={{ top: `calc(124px + ${index * 40}px)` }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">

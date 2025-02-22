@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
-export const HeroOrbit = ({
+export const HomeOrbit = ({
   children,
   size,
   rotation,
