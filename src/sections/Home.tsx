@@ -56,7 +56,7 @@ export const HomeSection = () => {
       <div className="container">
         <div className="max-w-5xl mx-auto">
           <h1 className="font-serif text-6xl text-center mt-8 tracking-wide">
-            Hello! I'm Sonny Ornido
+            Hello! I&apos;m Sonny Ornido
           </h1>
           <h1 className="font-serif text-5xl text-center mt-8 tracking-wide">
             Software Developer
