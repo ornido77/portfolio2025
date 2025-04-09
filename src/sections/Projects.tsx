@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import businessware from "@/assets/images/bw.png";
 import mobileBarcode from "@/assets/images/mb.png";
 import businesstime from "@/assets/images/bt.png";
@@ -131,9 +133,15 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container ">
-        <div className="sticky top-16">
+        <motion.div
+          className="sticky top-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 2, ease: "easeOut" }}
+        >
           <SectionHeader title="Projects" />
-        </div>
+        </motion.div>
 
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
           {portfolioProjects.map((project, index) => (
