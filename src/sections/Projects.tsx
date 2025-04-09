@@ -1,6 +1,8 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import businessware from "@/assets/images/bw.png";
+import mobileBarcode from "@/assets/images/mb.png";
+import businesstime from "@/assets/images/bt.png";
+import itemChecker from "@/assets/images/ic.png";
+import poolCalculator from "@/assets/images/pc.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -9,36 +11,69 @@ import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
     company: "Amici Mercantile Inc.",
-    year: "2024",
+    year: "2024-2025",
     title: "Businessware",
     results: [
-      { title: "Developed the app for mobile and web." },
       {
         title:
-          "Integrated a Unified Business Suite with Inventory, CRM, Customer Service and POS functionalities.",
+          "Developed and deployed a full-featured ERP system with modules for Inventory, POS, CRM, and Customer Service.",
       },
-      { title: "Streamlined and automated employee workflows." },
+      {
+        title:
+          "Ensured cross-platform compatibility across mobile, iOS, and web using Flutter and web technologies.",
+      },
+      {
+        title:
+          "Integrated CI/CD pipelines for streamlined development and deployment.",
+      },
+      {
+        title:
+          "Implemented scalable web services using Flask and MySQL for smooth backend operations.",
+      },
     ],
     link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    image: businessware,
   },
   {
     company: "Amici Mercantile Inc.",
     year: "2023",
     title: "Businesstime",
     results: [
-      { title: "Enables users to time in and out from any location." },
       {
         title:
-          "Helps supervisors track employee attendance with GPS and photo verification.",
+          "Developed a time tracking and attendance app tailored for field technicians and employees.",
       },
       {
         title:
-          "Restricts access by registering device IDs, ensuring only authorized users can use the app.",
+          "Captured time-in/out logs with GPS tagging for accurate reporting.",
+      },
+      {
+        title:
+          "Introduced a simple, user-friendly UI optimized for both android and ios platforms.",
       },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    image: businesstime,
+  },
+  {
+    company: "Amici Mercantile Inc.",
+    year: "2023",
+    title: "Item Checker",
+    results: [
+      {
+        title:
+          "Built with Flutter for seamless deployment on both Android and iOS devices.",
+      },
+      {
+        title:
+          "Designed for quality control and inventory verification during audits and stocktakes.",
+      },
+      {
+        title: "Provided discrepancy reports to support warehouse operations.",
+      },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: itemChecker,
   },
   {
     company: "Ximera Business Solutions",
@@ -47,16 +82,48 @@ const portfolioProjects = [
     results: [
       {
         title:
-          "Implemented serial number tracking for better product traceability.",
+          "Created a Flutter-based app for scanning and syncing serialized inventory data.",
       },
       {
         title:
           "Enhanced FIFO (First In, First Out) operations for inventory management.",
       },
-      { title: "Improved product monitoring through detailed reports." },
+      {
+        title:
+          "Integrated with the company ERP system to support real-time stock management.",
+      },
+      {
+        title:
+          "Enabled offline barcode scanning and data caching for field operatives.",
+      },
+      {
+        title: "Enhanced workflow efficiency and accuracy of asset tracking.",
+      },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    image: mobileBarcode,
+  },
+
+  {
+    company: "Ximera Business Solutions",
+    year: "2021",
+    title: "Pool Calculator",
+    results: [
+      {
+        title:
+          "Created a utility app for calculating chemical requirements and water volume for pools.",
+      },
+      {
+        title:
+          "Offered offline functionality, ideal for pool technicians in the field.",
+      },
+      {
+        title:
+          "Built with Flutter for fast, lightweight performance on android and ios devices.",
+      },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: poolCalculator,
   },
 ];
 
@@ -72,43 +139,46 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, index) => (
             <Card
               key={project.title}
-              className="pt-8 px-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              className="py-4 px-6 md:py-12 md:px-10 lg:py-16 lg:px-20 sticky"
               style={{ top: `calc(124px + ${index * 40}px)` }}
             >
-              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-                <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
-                    <span>{project.company}</span>
-                    <span>&bull;</span>
-                    <span>{project.year}</span>
+              <div className="flex flex-col md:flex-row gap-4 md:gap-16 md:justify-between">
+                <div className="flex:1 lg:pb-16">
+                  <div className="lg:flex lg:flex-col lg:justify-between">
+                    <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-xs md:text-sm text-transparent bg-clip-text">
+                      <span>{project.company}</span>
+                      <span>&bull;</span>
+                      <span>{project.year}</span>
+                    </div>
+                    <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
+                      {project.title}
+                    </h3>
+                    <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
+                    <ul className="flex flex-col gap-1 md:gap-4 mt-4 md:mt-5">
+                      {project.results.map((result) => (
+                        <li
+                          key={result.title}
+                          className="flex gap-2 text-xs md:text-base text-white/50"
+                        >
+                          <CheckIcon className="size-5 md:size-6" />
+                          <span>{result.title}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
-                    {" "}
-                    {project.title}
-                  </h3>
-                  <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                    {project.results.map((result) => (
-                      <li
-                        key={result.title}
-                        className="flex gap-2 text-sm md:text-base text-white/50"
-                      >
-                        <CheckIcon className="size-5 md:size-6" />
-                        <span>{result.title}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-900 h-12 w-full md:w-auto px-8 rounded-xl font-semibold mt-8">
-                      View App
-                    </button>
-                  </a>
+                  <div>
+                    <a href={project.link}>
+                      <button className="bg-white text-gray-900 text-xs md:text-base sm:h-8 md:h-12 md:w-auto px-8 rounded-xl font-semibold mt-2 md:mt-8">
+                        View App
+                      </button>
+                    </a>
+                  </div>
                 </div>
-                <div className="relative">
+                <div className="relative w-full h-auto md:w-64 md:h-auto overflow-hidden rounded-xl">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb- md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    className="sm:-mb- sm:-mb-0 md:mb-0 md:mt-0 lg:mt-0 lg:absolute sm:h-auto lg:h-auto lg:w-56 md:flex-shrink-0"
                   />
                 </div>
               </div>
