@@ -54,10 +54,10 @@ export const HomeSection = () => {
       </div>
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-serif text-6xl text-center mt-8 tracking-wide">
+          <h1 className="font-serif text-3xl md:text-6xl text-center mt-8 tracking-wide">
             Hello! I&apos;m Sonny Ornido
           </h1>
-          <h1 className="font-serif text-5xl text-center mt-8 tracking-wide">
+          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             Software Developer
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
