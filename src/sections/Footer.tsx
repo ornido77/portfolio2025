@@ -3,10 +3,10 @@ import { faInstagram, faFacebook, faGithub, faLinkedin } from "@fortawesome/free
 import { FooterIcons } from "@/components/FooterIcons";
 
 const icons = [
-  { link: "#", icon: faInstagram },
-  { link: "#", icon: faFacebook },
-  { link: "#", icon: faGithub },
-  { link: "#", icon: faLinkedin },
+  { link: "https://www.instagram.com/_sonnyornido/", icon: faInstagram },
+  { link: "https://www.facebook.com/sonnyornido35", icon: faFacebook },
+  { link: "https://github.com/ornido77", icon: faGithub },
+  { link: "https://www.linkedin.com/in/sonny-ornido-44632a1b3/", icon: faLinkedin },
 ];
 
 export const Footer = () => {

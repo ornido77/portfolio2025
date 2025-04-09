@@ -31,7 +31,7 @@ const portfolioProjects = [
           "Implemented scalable web services using Flask and MySQL for smooth backend operations.",
       },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://play.google.com/store/apps/details?id=com.ximera.businessware&hl=en",
     image: businessware,
   },
   {
@@ -52,7 +52,7 @@ const portfolioProjects = [
           "Introduced a simple, user-friendly UI optimized for both android and ios platforms.",
       },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://play.google.com/store/apps/details?id=ph.com.amici.businesstime&hl=en",
     image: businesstime,
   },
   {
@@ -72,7 +72,7 @@ const portfolioProjects = [
         title: "Provided discrepancy reports to support warehouse operations.",
       },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://play.google.com/store/apps/details?id=com.ximera.itemchecker2023&hl=en",
     image: itemChecker,
   },
   {
@@ -100,7 +100,7 @@ const portfolioProjects = [
         title: "Enhanced workflow efficiency and accuracy of asset tracking.",
       },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://play.google.com/store/apps/details?id=com.ximera.mobilebarcode",
     image: mobileBarcode,
   },
 
@@ -122,7 +122,7 @@ const portfolioProjects = [
           "Built with Flutter for fast, lightweight performance on android and ios devices.",
       },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://play.google.com/store/apps/details?id=ph.com.ximera.amici_pool_calculator&hl=en",
     image: poolCalculator,
   },
 ];
@@ -158,7 +158,7 @@ export const ProjectsSection = () => {
                       {project.results.map((result) => (
                         <li
                           key={result.title}
-                          className="flex gap-2 text-xs md:text-base text-white/50"
+                          className="flex gap-2 text-xs text-white/50"
                         >
                           <CheckIcon className="size-5 md:size-6" />
                           <span>{result.title}</span>
@@ -167,18 +167,18 @@ export const ProjectsSection = () => {
                     </ul>
                   </div>
                   <div>
-                    <a href={project.link}>
+                    <a href={project.link} target="_blank">
                       <button className="bg-white text-gray-900 text-xs md:text-base sm:h-8 md:h-12 md:w-auto px-8 rounded-xl font-semibold mt-2 md:mt-8">
                         View App
                       </button>
                     </a>
                   </div>
                 </div>
-                <div className="relative w-full h-auto md:w-64 md:h-auto overflow-hidden rounded-xl">
+                <div className="w-full h-auto md:w-64 rounded-xl bg-red">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="sm:-mb- sm:-mb-0 md:mb-0 md:mt-0 lg:mt-0 lg:absolute sm:h-auto lg:h-auto lg:w-56 md:flex-shrink-0"
+                    className="my-auto h-auto w-full md:flex-shrink-0"
                   />
                 </div>
               </div>

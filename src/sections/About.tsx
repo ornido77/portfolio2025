@@ -7,7 +7,6 @@ import FlutterIcon from "@/assets/icons/flutter.png";
 import FlaskIcon from "@/assets/icons/flask.png";
 import ReactIcon from "@/assets/icons/react.png";
 import NextIcon from "@/assets/icons/nextjs.png";
-import GitHubIcon from "@/assets/icons/github.png";
 import GitlabIcon from "@/assets/icons/gitlab.png";
 import VSCodeIcon from "@/assets/icons/vscode.png";
 import MySQLIcon from "@/assets/icons/mysql.png";

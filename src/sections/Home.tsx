@@ -1,5 +1,3 @@
-import memojiImage from "@/assets/images/memoji-computer.png";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import earthImage from "@/assets/images/earth.png";
 import marsImage from "@/assets/images/mars.png";
 import jupiterImage from "@/assets/images/jupiter.png";
@@ -7,6 +5,7 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import Image from "next/image";
 import { HomeOrbit } from "@/components/HomeOrbit";
+import Link from "next/link";
 
 export const HomeSection = () => {
   return (
@@ -66,11 +65,16 @@ export const HomeSection = () => {
             applications.
           </p>
         </div>
-        <div className="flex justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+        <div className="flex justify-center items-center mt-8 gap-4 ">
+          <a
+            href="./sonnyornidoresume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl z-20"
+          >
             <span>↓</span>
             <span className="font-semibold">Download Resume</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
