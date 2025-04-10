@@ -13,7 +13,7 @@ import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
     company: "Amici Mercantile Inc.",
-    year: "2024-2025",
+    year: "2024",
     title: "Businessware",
     results: [
       {
@@ -151,7 +151,7 @@ export const ProjectsSection = () => {
               style={{ top: `calc(124px + ${index * 40}px)` }}
             >
               <div className="flex flex-col md:flex-row gap-4 md:gap-16 md:justify-between">
-                <div className="flex:1 lg:pb-16">
+                <div className="w-full md:w-[500px] lg:pb-16">
                   <div className="lg:flex lg:flex-col lg:justify-between">
                     <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-xs md:text-sm text-transparent bg-clip-text">
                       <span>{project.company}</span>
