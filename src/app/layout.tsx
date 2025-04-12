@@ -11,8 +11,9 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  title: "Sonny Ornido Portfolio",
+  description:
+    "A modern and responsive developer portfolio built with NextJS, Framer Motion and TailwindCSS, showcasing my projects, skills, and work experience.",
 };
 
 export default function RootLayout({

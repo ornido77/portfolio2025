@@ -9,6 +9,11 @@ import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import flutterIcon from "@/assets/icons/flutter.png";
+import dartIcon from "@/assets/icons/dart.png";
+import flaskIcon from "@/assets/icons/flask.png";
+import pythonIcon from "@/assets/icons/python.png";
+import MySQLIcon from "@/assets/icons/mysql.png";
 
 const portfolioProjects = [
   {
@@ -35,6 +40,13 @@ const portfolioProjects = [
     ],
     link: "https://play.google.com/store/apps/details?id=com.ximera.businessware&hl=en",
     image: businessware,
+    tools: [
+      { name: "Flutter", icon: flutterIcon },
+      { name: "Dart", icon: dartIcon },
+      { name: "Flask", icon: flaskIcon },
+      { name: "Python", icon: pythonIcon },
+      { name: "MySQL", icon: MySQLIcon },
+    ],
   },
   {
     company: "Amici Mercantile Inc.",
@@ -56,6 +68,13 @@ const portfolioProjects = [
     ],
     link: "https://play.google.com/store/apps/details?id=ph.com.amici.businesstime&hl=en",
     image: businesstime,
+    tools: [
+      { name: "Flutter", icon: flutterIcon },
+      { name: "Dart", icon: dartIcon },
+      { name: "Flask", icon: flaskIcon },
+      { name: "Python", icon: pythonIcon },
+      { name: "MySQL", icon: MySQLIcon },
+    ],
   },
   {
     company: "Amici Mercantile Inc.",
@@ -76,6 +95,13 @@ const portfolioProjects = [
     ],
     link: "https://play.google.com/store/apps/details?id=com.ximera.itemchecker2023&hl=en",
     image: itemChecker,
+    tools: [
+      { name: "Flutter", icon: flutterIcon },
+      { name: "Dart", icon: dartIcon },
+      { name: "Flask", icon: flaskIcon },
+      { name: "Python", icon: pythonIcon },
+      { name: "MySQL", icon: MySQLIcon },
+    ],
   },
   {
     company: "Ximera Business Solutions",
@@ -104,6 +130,13 @@ const portfolioProjects = [
     ],
     link: "https://play.google.com/store/apps/details?id=com.ximera.mobilebarcode",
     image: mobileBarcode,
+    tools: [
+      { name: "Flutter", icon: flutterIcon },
+      { name: "Dart", icon: dartIcon },
+      { name: "Flask", icon: flaskIcon },
+      { name: "Python", icon: pythonIcon },
+      { name: "MySQL", icon: MySQLIcon },
+    ],
   },
 
   {
@@ -126,6 +159,13 @@ const portfolioProjects = [
     ],
     link: "https://play.google.com/store/apps/details?id=ph.com.ximera.amici_pool_calculator&hl=en",
     image: poolCalculator,
+    tools: [
+      { name: "Flutter", icon: flutterIcon },
+      { name: "Dart", icon: dartIcon },
+      { name: "Flask", icon: flaskIcon },
+      { name: "Python", icon: pythonIcon },
+      { name: "MySQL", icon: MySQLIcon },
+    ],
   },
 ];
 
@@ -173,6 +213,22 @@ export const ProjectsSection = () => {
                         </li>
                       ))}
                     </ul>
+                    <div className="flex flex-wrap gap-3 mt-4 md:mt-6">
+                      {project.tools.map((tool) => (
+                        <div
+                          key={tool.name}
+                          className="flex items-center gap-1 text-xs text-white/50 bg-white/10 px-3 py-1 rounded-full"
+                        >
+                          <Image
+                            src={tool.icon}
+                            alt={tool.name}
+                            width={16}
+                            height={16}
+                          />
+                          <span>{tool.name}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   <div>
                     <a href={project.link} target="_blank">

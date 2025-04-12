@@ -112,7 +112,7 @@ export const AboutSection = () => {
                   keep me balanced and energized.
                 </p>
               </div>
-              <div className="flex flex-wrap justify-start gap-6 px-6">
+              <div className="flex flex-wrap justify-start gap-4 px-4">
                 {hobbies.map((item, index) => (
                   <motion.div
                     key={item.title}
